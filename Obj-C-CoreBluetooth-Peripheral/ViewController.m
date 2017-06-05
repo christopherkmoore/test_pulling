@@ -62,6 +62,7 @@
     int i;
     for (i = 0; i < [_peripherals count]; i++) {
         [cell textLabel]
+        some changes
     }
 }
 
