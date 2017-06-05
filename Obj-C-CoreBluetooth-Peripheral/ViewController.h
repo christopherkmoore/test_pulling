@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+@import CoreBluetooth;
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <CBCentralManagerDelegate, UITableViewDelegate, UITableViewDataSource>
 
+@property (nonatomic, strong) CBCentralManager *centralManager;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSMutableArray *peripherals;
+
+- (void) centralManagerDidUpdateState:(CBCentralManager *)central;
 
 @end
 
